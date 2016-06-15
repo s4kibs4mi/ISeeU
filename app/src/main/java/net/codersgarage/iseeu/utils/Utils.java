@@ -11,6 +11,8 @@ import java.io.ByteArrayOutputStream;
  */
 
 public class Utils {
+    public static int COMPRESS_QUALITY = 50;
+
     public static byte[] frameByteToJpegByte(byte[] data, Camera camera) {
         try {
             Camera.Parameters parameters = camera.getParameters();
@@ -19,7 +21,7 @@ public class Utils {
                     size.width, size.height, null);
             ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
             image.compressToJpeg(
-                    new Rect(0, 0, image.getWidth(), image.getHeight()), 90,
+                    new Rect(0, 0, image.getWidth(), image.getHeight()), COMPRESS_QUALITY,
                     outputStream);
             return outputStream.toByteArray();
         } catch (Exception e) {

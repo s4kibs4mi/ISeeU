@@ -1,5 +1,10 @@
 package net.codersgarage.iseeu.networks;
 
+import android.content.Context;
+
+import net.codersgarage.iseeu.models.Settings;
+import net.codersgarage.iseeu.settings.SettingsProvider;
+
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
@@ -12,19 +17,24 @@ import java.net.UnknownHostException;
  */
 
 public class ISeeUClient {
-    private String HOST = "192.168.0.105";
-    private int PORT = 5670;
     private DatagramSocket datagramSocket;
     private DatagramPacket packet;
     private InetAddress inetAddress;
 
+    private SettingsProvider settingsProvider;
+    private Settings settings;
+
+    public ISeeUClient(Context context) {
+        settingsProvider = new SettingsProvider(context);
+        settings = settingsProvider.getSettings();
+    }
+
     public void init() {
+
         try {
             datagramSocket = new DatagramSocket();
-            inetAddress = InetAddress.getByName(HOST);
-        } catch (SocketException e) {
-            e.printStackTrace();
-        } catch (UnknownHostException e) {
+            inetAddress = InetAddress.getByName(settings.getHost());
+        } catch (SocketException | UnknownHostException e) {
             e.printStackTrace();
         }
     }
@@ -33,7 +43,7 @@ public class ISeeUClient {
         Thread thread = new Thread() {
             @Override
             public void run() {
-                packet = new DatagramPacket(data, data.length, inetAddress, PORT);
+                packet = new DatagramPacket(data, data.length, inetAddress, settings.getPort());
                 try {
                     datagramSocket.send(packet);
                 } catch (IOException e) {

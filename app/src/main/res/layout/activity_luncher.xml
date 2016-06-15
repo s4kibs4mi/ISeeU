@@ -3,10 +3,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="net.codersgarage.iseeu.views.LuncherActivity">
+    android:background="#113248"
+    android:gravity="center"
+    tools:context=".views.SplashActivity">
 
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ISeeU ;)"
+        android:textSize="50dp" />
+
+    <TextView
+        android:id="@+id/hostAddressLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appName"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Host Address"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/hostAddressValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hostAddressLabel"
+        android:gravity="center"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/hostPortLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hostAddressValue"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="Host Port"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/hostPortValue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hostPortLabel"
+        android:gravity="center"
+        android:inputType="number"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textSize="25sp" />
+
+    <CheckBox
+        android:id="@+id/autoLoginValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hostPortValue"
+        android:layout_marginLeft="110dp"
+        android:text="Auto Connect"
+        android:textSize="20sp" />
+
+    <Button
+        android:id="@+id/connectBtn"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/autoLoginValue"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="30dp"
+        android:text="Connect"
+        android:textSize="20dp" />
 </RelativeLayout>

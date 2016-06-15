@@ -1,45 +1,59 @@
 package net.codersgarage.iseeu.views;
 
 import android.content.Context;
-import android.content.Intent;
+import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
-import net.codersgarage.iseeu.services.PersistenceStreamService;
 import net.codersgarage.iseeu.utils.Utils;
 
 /**
  * Created by s4kib on 6/14/16.
  */
 
-public class CameraView extends SurfaceView implements SurfaceHolder.Callback, Camera.PreviewCallback {
+public class CameraViewService extends SurfaceView implements SurfaceHolder.Callback, Camera.PreviewCallback {
     private String SCOPE_TAG = getClass().getCanonicalName();
 
-    private SurfaceHolder surfaceHolder;
+    private SurfaceTexture surfaceTexture;
+
     private Context context;
 
-    public CameraView(Context context) {
+    public CameraViewService(Context context) {
         super(context);
 
         this.context = context;
         init();
     }
 
-    public void init() {
-        surfaceHolder = getHolder();
-        surfaceHolder.addCallback(this);
-        surfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_NORMAL);
+    private void init() {
+        Log.d(SCOPE_TAG + " onInit", "Called");
+
+        surfaceTexture = new SurfaceTexture(10);
 
         doOnStart();
+    }
+
+    private void doOnStart() {
+        try {
+            MainActivity.camera.setPreviewTexture(surfaceTexture);
+            MainActivity.camera.setPreviewCallback(this);
+            MainActivity.camera.startPreview();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void doOnStop() {
+        getHolder().removeCallback(this);
+        MainActivity.camera.stopPreview();
     }
 
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
         Log.d(SCOPE_TAG + " onCreated", "Called");
 
-        doOnStart();
     }
 
     @Override
@@ -63,27 +77,4 @@ public class CameraView extends SurfaceView implements SurfaceHolder.Callback, C
             MainActivity.iSeeUClient.send(data);
         }
     }
-
-    public void doOnStart() {
-        try {
-            MainActivity.camera.setPreviewDisplay(surfaceHolder);
-            MainActivity.camera.setPreviewCallback(this);
-            MainActivity.camera.startPreview();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void doOnStop() {
-        Log.d("doOnStop", "Called");
-
-        getHolder().removeCallback(this);
-        MainActivity.camera.stopPreview();
-
-        if (!MainActivity.isQuit) {
-            Intent streamService = new Intent(context, PersistenceStreamService.class);
-            context.startService(streamService);
-        }
-    }
-
 }
