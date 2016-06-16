@@ -22,7 +22,6 @@
             </intent-filter>
         </activity>
         <activity android:name=".views.MainActivity" />
-        <activity android:name=".views.SettingsActivity"></activity>
 
         <service
             android:name=".services.PersistenceStreamService"

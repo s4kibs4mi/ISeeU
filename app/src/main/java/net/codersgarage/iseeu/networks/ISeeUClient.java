@@ -21,11 +21,10 @@ public class ISeeUClient {
     private DatagramPacket packet;
     private InetAddress inetAddress;
 
-    private SettingsProvider settingsProvider;
     private Settings settings;
 
     public ISeeUClient(Context context) {
-        settingsProvider = new SettingsProvider(context);
+        SettingsProvider settingsProvider = new SettingsProvider(context);
         settings = settingsProvider.getSettings();
     }
 

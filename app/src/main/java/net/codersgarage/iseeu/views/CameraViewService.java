@@ -18,12 +18,9 @@ public class CameraViewService extends SurfaceView implements SurfaceHolder.Call
 
     private SurfaceTexture surfaceTexture;
 
-    private Context context;
-
     public CameraViewService(Context context) {
         super(context);
 
-        this.context = context;
         init();
     }
 

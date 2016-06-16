@@ -64,9 +64,6 @@ public class SplashActivity extends AppCompatActivity implements View.OnClickLis
 
             settingsProvider.addSettings(settings);
 
-            Log.d("Input := ", hostAddressValue.getText().toString() +
-                    hostPortValue.getText().toString());
-
             Intent intent = new Intent(this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.putExtra("isBegin", true);
