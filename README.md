@@ -8,23 +8,22 @@ Features :
  3. Useable as CC camera for home security.
  4. High quality video resolution.
 
-This application is available as open source project, located at : https://github.com/s4kibs4mi/ISeeU
-and Receiver application source code here : https://github.com/s4kibs4mi/ISeeUReceiver
-Feel free to contribute or report any bug as well as feature you want to include.
-
-If you want to get a customized version of this app with extra feature feel free to contact : coders.garage@gmail.com with subject [ iSeeU Buyer ]
+[ Here is receiver source code ](https://github.com/s4kibs4mi/ISeeUReceiver)
 
 # Download
-https://play.google.com/store/apps/details?id=net.codersgarage.iseeu&hl=en
+[ Google Play ](https://play.google.com/store/apps/details?id=net.codersgarage.iseeu&hl=en)
 
 # Tutorial
-http://blog.sakib.ninja/2016/06/iseeu-app-usage-tutorial.html
+[ Sakib Sami's Blog ](http://blog.sakib.ninja/2016/06/iseeu-app-usage-tutorial.html)
 
 # Licensing
-Released under Apache 2
-Please checkout LICENSING.txt for details
+[ Apache 2 ](https://github.com/s4kibs4mi/ISeeU/blob/master/LICENSE)
+
+# Contribute
+Feel free to contribute or report any bug as well as feature you want to include.
 
 # Donate
 If you find ISeeU useful and feel like donating
-follow : https://paypal.me/s4kibs4mi
-or contact s4kibs4mi@gmail.com
+[ Follow the steps ](https://paypal.me/s4kibs4mi)
+or contact s4kibs4mi@gmail.com .
+If you want to get a customized version of this app with extra feature feel free to contact.
