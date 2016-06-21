@@ -19,3 +19,12 @@ https://play.google.com/store/apps/details?id=net.codersgarage.iseeu&hl=en
 
 # Tutorial
 http://blog.sakib.ninja/2016/06/iseeu-app-usage-tutorial.html
+
+# Licensing
+Released under Apache 2
+Please checkout LICENSING.txt for details
+
+# Donate
+If you find ISeeU useful and feel like donating
+follow : https://paypal.me/s4kibs4mi
+or contact s4kibs4mi@gmail.com
