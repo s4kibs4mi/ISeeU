@@ -9,11 +9,11 @@ Features :
  4. High quality video resolution.
 
 # Download
-[ Google Play ](https://play.google.com/store/apps/details?id=net.codersgarage.iseeu&hl=en)
+[ Google Play ](https://play.google.com/store/apps/details?id=net.codersgarage.iseeu&hl=en)</br>
 [ Receiver ](https://github.com/s4kibs4mi/ISeeUReceiver/releases/download/v1.0/iSeeUReceiver-v1.0.jar)
 
 # Source Codes
-[ ISeeU ](#)
+[ ISeeU ](https://github.com/s4kibs4mi/ISeeU)</br>
 [ ISeeU Receiver ](https://github.com/s4kibs4mi/ISeeUReceiver)
 
 # Tutorial
@@ -26,7 +26,7 @@ Features :
 Feel free to contribute or report any bug as well as feature you want to include.
 
 # Donate
-If you find ISeeU useful and feel like donating
+If you find ISeeU useful and feel like donating</br>
 [ Follow the steps ](https://paypal.me/s4kibs4mi)
-or contact s4kibs4mi@gmail.com .
+or contact s4kibs4mi@gmail.com</br>
 If you want to get a customized version of this app with extra feature feel free to contact.
