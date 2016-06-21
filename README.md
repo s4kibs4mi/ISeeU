@@ -8,10 +8,13 @@ Features :
  3. Useable as CC camera for home security.
  4. High quality video resolution.
 
-[ Here is receiver source code ](https://github.com/s4kibs4mi/ISeeUReceiver)
-
 # Download
 [ Google Play ](https://play.google.com/store/apps/details?id=net.codersgarage.iseeu&hl=en)
+[ Receiver ](https://github.com/s4kibs4mi/ISeeUReceiver/releases/download/v1.0/iSeeUReceiver-v1.0.jar)
+
+# Source Codes
+[ ISeeU ](#)
+[ ISeeU Receiver ](https://github.com/s4kibs4mi/ISeeUReceiver)
 
 # Tutorial
 [ Sakib Sami's Blog ](http://blog.sakib.ninja/2016/06/iseeu-app-usage-tutorial.html)
